@@ -23,7 +23,7 @@ Posibles 10 microservicios :
     
 - **Microservicio de Hospitalización:** Para clínicas grandes, gestiona qué mascotas están internadas, en qué jaula/sala se encuentran, y su monitoreo por hora.
     
-- **Microservicio de Notificaciones:** Centraliza el envío de correos, SMS o mensajes de WhatsApp (ej. recordatorios de vacunas, confirmación de citas).
+- **Microservicio de Login:** Registrar a los trabajadores, (Doctores, enfermero, secretarios) dependiendo de los roles solo tendran acceso a sus areas .
     
 - **Microservicio de Personal (Staff):** Administra los roles, turnos, permisos y especialidades de los veterinarios y técnicos.
 
