@@ -7,9 +7,8 @@ Requisitos base del proyecto :
 
 Posibles 10 microservicios :
 
-- **Microservicio de Pacientes (Mascotas):** Maneja el registro, la raza, especie, peso, edad, y la foto de la mascota.
+- **Microservicio de Pacientes (Mascotas):** Maneja el registro, la raza, especie, peso, edad,Dueño y la foto de la mascota.
     
-- **Microservicio de Clientes (Dueños):** Gestiona la información de contacto de los tutores, direcciones, y preferencias de contacto.
     
 - **Microservicio de Citas (Agendamiento):** Se encarga de la disponibilidad de los consultorios, calendarios de los veterinarios y reservas de los clientes.
     
