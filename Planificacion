@@ -1,0 +1,43 @@
+
+### 1. Planificación y Diseño de Datos
+Antes de escribir código, debes definir la estructura. [cite_start]Cada uno de tus 10 microservicios **debe tener su propia base de datos** independiente (MySQL, PostgreSQL u Oracle)[cite: 26, 31].
+* [cite_start]**Diseño Relacional:** Crea un diagrama entidad-relación (DER) para cada microservicio[cite: 30].
+* [cite_start]**Normalización:** Asegúrate de que las tablas estén normalizadas y que la integridad referencial esté bien definida[cite: 30, 33].
+* [cite_start]**Roles de Usuario:** Define al menos 2 o 3 roles (ej. Administrador, Veterinario, Recepcionista) y qué módulos puede tocar cada uno[cite: 35, 41].
+
+### 2. Configuración de la Infraestructura Base
+Debes montar el "ecosistema" que permitirá que tus 10 servicios coexistan:
+* [cite_start]**Service Discovery (Eureka):** Configura un servidor Eureka para que todos tus microservicios se registren y se encuentren entre sí[cite: 24].
+* **API Gateway:** Crea un punto de entrada único. [cite_start]Todas las peticiones del frontend o de herramientas como Postman deben ir al Gateway, y este las redirigirá al servicio correspondiente[cite: 23].
+* **Repositorio:** Crea un repositorio en **GitHub**. [cite_start]Es obligatorio para mostrar la trazabilidad, el trabajo en equipo y el uso de ramas (*branches*)[cite: 59, 64].
+
+### 3. Desarrollo de Microservicios (Lógica de Negocio)
+Para cada uno de tus 10 servicios (Pacientes, Citas, Facturación, etc.):
+* [cite_start]**Arquitectura:** Usa **Spring Boot** con una estructura limpia[cite: 10].
+* [cite_start]**Persistencia:** Implementa **Spring Data JPA** para interactuar con tu base de datos[cite: 84].
+* [cite_start]**Validación:** Usa DTOs y `Spring Boot Starter Validation` (@NotNull, @Size, etc.) para proteger la integridad de los datos recibidos[cite: 47].
+* [cite_start]**Endpoints:** Diseña rutas **RESTful** claras (ej: `GET /api/v1/pacientes/{id}`)[cite: 15].
+
+### 4. Comunicación e Interacción Real
+[cite_start]Este es el punto más crítico: los servicios deben hablar entre sí[cite: 18].
+* **Comunicación Sincrónica (OpenFeign):** Úsalo para consultas rápidas. [cite_start]*Ejemplo:* El microservicio de **Citas** consulta al de **Pacientes** para validar si la mascota existe[cite: 21, 85].
+* **Comunicación Asincrónica (Apache Kafka):** Úsalo para eventos que no requieren respuesta inmediata. [cite_start]*Ejemplo:* Cuando se cierra una consulta en **Historial Clínico**, se envía un mensaje a **Facturación** para generar el cobro automáticamente[cite: 21].
+* **Sincronización de datos:** No compartas tablas. [cite_start]Si un servicio necesita datos de otro, usa Kafka para replicar esa información mediante proyecciones[cite: 29].
+
+### 5. Seguridad y Control de Acceso
+[cite_start]Implementa **Spring Security** para proteger el sistema[cite: 52]:
+* [cite_start]**Cifrado:** Usa **BCrypt** para las contraseñas del personal[cite: 54].
+* [cite_start]**Autenticación:** Implementa login basado en **Tokens (JJWT)**[cite: 55].
+* [cite_start]**Autorización (RBAC):** Configura los permisos para que, por ejemplo, el "Secretario" pueda agendar citas pero no ver resultados del laboratorio[cite: 56].
+
+### 6. Calidad y Documentación
+* [cite_start]**Pruebas Unitarias:** Escribe pruebas con **JUnit 5 y Mockito** para asegurar que la lógica de negocio (especialmente en Facturación e Inventario) sea correcta[cite: 71, 84].
+* [cite_start]**Swagger:** Integra **SpringDoc** en cada microservicio para tener una documentación interactiva de tus APIs[cite: 70].
+* [cite_start]**Markdown:** Redacta un archivo `README.md` profesional en GitHub explicando cómo levantar el proyecto[cite: 70, 84].
+
+### 7. Despliegue y Entrega Final
+Para que el proyecto sea calificado como profesional, debe estar accesible:
+* [cite_start]**Contenedores:** Es muy recomendable usar **Docker Compose** para levantar los 10 microservicios y sus 10 bases de datos con un solo comando[cite: 32, 85].
+* [cite_start]**Exposición:** Usa herramientas como **Ngrok** para mostrar tu avance o despliega los servicios en la nube (**Render, Railway o Koyeb**)[cite: 72, 73, 85].
+* [cite_start]**URL Funcional:** El resultado final debe ser una URL que permita consumir los endpoints[cite: 74].
+
