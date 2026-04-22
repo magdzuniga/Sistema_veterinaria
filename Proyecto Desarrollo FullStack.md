@@ -6,6 +6,7 @@ Requisitos base del proyecto :
 1-minimo 10 microservicios
 
 Microservicio de Clientes y Propietarios: gestiona la información personal de los dueños de las mascotas, sus datos de contacto y métodos de pago.
+
 Microservicio de Mascotas (Pacientes): administra el perfil de cada animal (nombre, especie, raza, edad, peso) y su vinculación con el propietario.
        
 Microservicio de Citas (Agendamiento): Se encarga de la disponibilidad de los consultorios, calendarios de los veterinarios y reservas de los clientes.
