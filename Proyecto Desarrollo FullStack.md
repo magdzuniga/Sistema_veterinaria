@@ -10,6 +10,7 @@ Microservicio de Registro de Propietario y Mascota: gestiona la información per
 Microservicio de Identidad y acceso: Su único objetivo es responder a dos preguntas: ¿Quién eres? (Autenticación) y ¿A qué tienes permiso de acceder? (Autorización).
 
 Microservicio de Citas (Agendamiento): Se encarga de la disponibilidad de los consultorios, calendarios de los veterinarios y reservas de los clientes.
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 Microservicion de Tratamiento: se revisa a la mascota y se agrega los datos obtenidos al historial.
 
