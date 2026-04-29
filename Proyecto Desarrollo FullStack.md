@@ -14,15 +14,18 @@ Microservicio de Citas (Agendamiento): Se encarga de la disponibilidad de los co
 -----------------------------------------------------------------------------------------------------------------------------------------
 Microservicion de Tratamiento: se revisa a la mascota y se agrega los datos obtenidos al historial.
 
+Microservicio de Laboratorio: Maneja las órdenes de exámenes (sangre, rayos X) y el almacenamiento de los resultados o imágenes enviadas por laboratorios externos.
+
 Microservicio de Historial Clínico: Almacena las consultas pasadas, diagnósticos, vacunas aplicadas, cirugías y notas médicas.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+microservicio de gestion de documentos
+
+Microservicio de 
+
+
+Microservicio de Inventario y Farmacia: Controla el stock de medicamentos, alimentos, alertas de caducidad y reabastecimiento.
     
 Microservicio de Facturación y Pagos: Gestiona la creación de recibos, integración con pasarelas de pago y cuentas por cobrar.
     
-Microservicio de Inventario y Farmacia: Controla el stock de medicamentos, alimentos, alertas de caducidad y reabastecimiento.
-    
-Microservicio de Laboratorio: Maneja las órdenes de exámenes (sangre, rayos X) y el almacenamiento de los resultados o imágenes enviadas por laboratorios externos.
-    
-Microservicio de Hospitalización: Para clínicas grandes, gestiona qué mascotas están internadas, en qué jaula/sala se encuentran, y su monitoreo por hora.
-    
-
 
