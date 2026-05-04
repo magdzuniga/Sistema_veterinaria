@@ -5,8 +5,13 @@ En este achivo se detallaran los microservicios y todo lo necesario para que est
 
 # Dependencias necesarias 
 spring web
+
 lombok
+
 mysql drive
+
 validation
+
 spring date jpa
+
 flyway magration
