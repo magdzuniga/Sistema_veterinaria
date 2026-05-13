@@ -15,3 +15,5 @@ validation
 spring date jpa
 
 flyway magration
+
+openfeign
