@@ -18,6 +18,13 @@ flyway magration
 
 openfeign
 
+
+# Especificos de identificacion y acceso
+
+SpringSecurity
+
+
+
 # 1. Arquitectura y Fundamentos
    
 Una API REST y el protocolo HTTP definen el estándar de internet mediante el cual las aplicaciones web se comunican intercambiando datos de forma rápida y sin estado. En cuanto al diseño de sistemas, los microservicios permiten dividir aplicaciones gigantes (monolitos) en pequeños módulos autónomos. El CSR (Client-Side Rendering) delega al navegador la tarea de dibujar la interfaz visual , mientras que el patrón MVC organiza el código interno del backend separando las responsabilidades de forma fluida: el cliente envía la petición, el Controller la recibe y coordina, el Service aplica la lógica de negocio, el Repository interactúa con la base de datos, y el Model estructura los datos.
